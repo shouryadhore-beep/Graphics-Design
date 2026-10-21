@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shouryadhore-beep.github.io/Graphics-Design/Raviraj%20Shedge%20Web/sitemap.xml
