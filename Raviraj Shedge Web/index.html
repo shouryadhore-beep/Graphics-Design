@@ -1,0 +1,999 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101114" />
+    <meta
+      name="description"
+      content="Explore creative event posters and festive designs by Raviraj Shedge."
+    />
+    <title>Graphics Design | Creative Portfolio</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #111215;
+        --card: #1c1d20;
+        --cyan: #08a8d1;
+        --blue: #b53f08;
+        --white: #f7f8fa;
+        --muted: #b8bdc4;
+        --line: rgba(255, 255, 255, 0.12);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 24px;
+      }
+      body {
+        margin: 0;
+        padding: 28px 20px 100px;
+        color: var(--white);
+        background:
+          radial-gradient(
+            ellipse at 16% 5%,
+            rgba(9, 151, 194, 0.13),
+            transparent 35rem
+          ),
+          radial-gradient(
+            ellipse at 90% 44%,
+            rgba(9, 102, 160, 0.11),
+            transparent 34rem
+          ),
+          var(--bg);
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font: inherit;
+      }
+      .site {
+        width: min(1040px, 100%);
+        margin: 0 auto;
+      }
+      .hero {
+        position: relative;
+        isolation: isolate;
+        min-height: 490px;
+        overflow: hidden;
+        padding: clamp(28px, 6vw, 62px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        background: #1c1c1f;
+        box-shadow: 0 24px 75px rgba(0, 0, 0, 0.32);
+        animation: enter 0.8s ease both;
+      }
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: -20% -35% auto auto;
+        z-index: -1;
+        width: 76%;
+        height: 135%;
+        transform: rotate(43deg);
+        transform-origin: center;
+        background: var(--cyan);
+        opacity: 0.94;
+        animation: stripe-in 1s 0.1s ease both;
+      }
+      .hero::after {
+        right: -55%;
+        background: var(--blue);
+        opacity: 0.92;
+        animation-delay: 0.22s;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        font-weight: 800;
+        font-size: 0.9rem;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .brand-mark {
+        display: block;
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 620px;
+      }
+      .hero h1 {
+        margin: 25px 0 5px;
+        font-size: clamp(2.5rem, 7vw, 4.4rem);
+        line-height: 1.04;
+        letter-spacing: -0.045em;
+        animation: enter 0.8s 0.15s ease both;
+      }
+      .hero-name {
+        margin: 0 0 12px;
+        color: #d1d3d8;
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        animation: enter 0.8s 0.2s ease both;
+      }
+      .hero h2 {
+        margin: 0 0 18px;
+        color: #dce8ec;
+        font-size: clamp(1.15rem, 3vw, 1.7rem);
+        font-weight: 550;
+        animation: enter 0.8s 0.25s ease both;
+      }
+      .rule {
+        width: 112px;
+        height: 4px;
+        margin: 28px 0 34px;
+        background: var(--cyan);
+      }
+      .intro {
+        max-width: 500px;
+        color: #d1d3d8;
+        font-size: 1rem;
+        line-height: 1.7;
+        animation: enter 0.8s 0.32s ease both;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+      .action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        min-width: 142px;
+        padding: 12px 19px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 999px;
+        background: #428bc1;
+        color: #fff;
+        font-weight: 650;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .action:hover {
+        transform: translateY(-3px);
+        background: #167fb8;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+      .action.secondary {
+        background: rgba(12, 15, 18, 0.48);
+      }
+      .action.secondary:hover {
+        background: #121518;
+      }
+      .action-icon {
+        font-size: 1.1rem;
+      }
+      .section {
+        padding: 78px 0 8px;
+      }
+      .section-heading {
+        margin-bottom: 27px;
+      }
+      .kicker {
+        color: #42c7eb;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .section-heading h2 {
+        margin: 9px 0 0;
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.04em;
+      }
+      .section-heading p {
+        max-width: 600px;
+        margin: 11px 0 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .about-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: center;
+        padding: 30px;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        background: linear-gradient(135deg, #202124, #17181b);
+      }
+      .about-copy p {
+        margin: 0;
+        color: #d0d2d6;
+        line-height: 1.8;
+      }
+      .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 11px;
+        margin: 22px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .skills li {
+        padding: 12px 13px;
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        color: #e5e8eb;
+        background: rgba(255, 255, 255, 0.035);
+        font-size: 0.9rem;
+      }
+      .skills li::before {
+        content: "✦";
+        margin-right: 8px;
+        color: #35c4e9;
+      }
+      .terms {
+        margin-top: 24px;
+        padding: 20px;
+        border: 1px solid rgba(27, 181, 218, 0.28);
+        border-radius: 11px;
+        background: rgba(8, 168, 209, 0.07);
+        color: #e5e8eb;
+        line-height: 1.75;
+      }
+      .terms h3 {
+        margin: 0 0 12px;
+        color: #42c7eb;
+        font-size: 1.05rem;
+      }
+      .terms ol {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding-left: 1.5rem;
+      }
+      .terms li {
+        padding-left: 4px;
+      }
+      .terms > p {
+        margin: 16px 0 10px;
+        font-weight: 700;
+      }
+      .payment-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+      }
+      .payment-details span {
+        padding: 8px 11px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.045);
+        font-size: 0.9rem;
+      }
+      .payment-details strong {
+        color: #42c7eb;
+      }
+      .about-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 11px;
+      }
+      .about-image img {
+        display: block;
+        width: 100%;
+        max-height: 370px;
+        object-fit: cover;
+        object-position: center 28%;
+      }
+      .image-note {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        padding: 9px 13px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 8px;
+        background: rgba(13, 15, 18, 0.78);
+        backdrop-filter: blur(8px);
+        font-size: 0.78rem;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 15px;
+      }
+      .poster-item {
+        display: grid;
+        align-content: start;
+        gap: 8px;
+        min-width: 0;
+      }
+      .poster {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 4 / 5;
+        padding: 0;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--card);
+        cursor: zoom-in;
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s cubic-bezier(0.2, 0.7, 0.25, 1),
+          border-color 0.25s ease;
+      }
+      .poster-caption {
+        margin: 0;
+        color: #c9d2d8;
+        font-size: 0.95rem;
+        font-weight: 700;
+        line-height: 1.4;
+        text-align: center;
+      }
+      .poster.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .poster:hover {
+        transform: translateY(-5px) scale(1.015);
+        border-color: rgba(35, 197, 232, 0.75);
+      }
+      .poster img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.55s ease;
+      }
+      .poster:hover img {
+        transform: scale(1.06);
+      }
+      .poster::after {
+        content: "Open poster ↗";
+        position: absolute;
+        inset: auto 0 0;
+        padding: 35px 14px 14px;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        color: white;
+        font-size: 0.84rem;
+        font-weight: 700;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        text-align: left;
+      }
+      .poster:hover::after,
+      .poster:focus-visible::after {
+        opacity: 1;
+      }
+      .contact-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        padding: 30px;
+        border: 1px solid rgba(27, 181, 218, 0.3);
+        border-radius: 15px;
+        background: linear-gradient(
+          115deg,
+          rgba(8, 168, 209, 0.16),
+          rgba(8, 126, 181, 0.06) 56%,
+          #1b1c1f 56%
+        );
+      }
+      .contact-card h2 {
+        margin: 0 0 8px;
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+      }
+      .contact-card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+      .contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .contact-actions .action {
+        min-width: 130px;
+      }
+      footer {
+        padding: 42px 0 15px;
+        color: #9ea4ac;
+        font-size: 0.85rem;
+        text-align: center;
+      }
+
+      .bottom-nav {
+        position: fixed;
+        z-index: 5;
+        left: 50%;
+        bottom: 16px;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        width: min(700px, calc(100% - 32px));
+        padding: 8px;
+        transform: translateX(-50%);
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 12px 45px rgba(0, 0, 0, 0.42);
+        backdrop-filter: blur(12px);
+      }
+      .bottom-nav a {
+        display: grid;
+        justify-items: center;
+        gap: 3px;
+        flex: 1;
+        padding: 7px 5px;
+        border-radius: 9px;
+        color: #414951;
+        font-size: 0.65rem;
+        font-weight: 700;
+        transition:
+          color 0.2s ease,
+          background 0.2s ease;
+      }
+      .bottom-nav a span {
+        color: #087eae;
+        font-size: 1.22rem;
+        line-height: 1.2;
+      }
+      .bottom-nav a:hover,
+      .bottom-nav a.active {
+        color: #087eae;
+        background: #e8f6fb;
+      }
+      .lightbox {
+        position: fixed;
+        z-index: 10;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: rgba(6, 8, 10, 0.94);
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.25s ease,
+          visibility 0.25s ease;
+      }
+      .lightbox.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .lightbox img {
+        display: block;
+        max-width: min(90vw, 850px);
+        max-height: 86vh;
+        border-radius: 8px;
+        transform: scale(0.96);
+        transition: transform 0.25s ease;
+      }
+      .lightbox.open img {
+        transform: scale(1);
+      }
+      .close {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        width: 46px;
+        height: 46px;
+        border: 1px solid #ffffff55;
+        border-radius: 50%;
+        color: white;
+        background: #ffffff12;
+        font-size: 1.6rem;
+        cursor: pointer;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid #42c7eb;
+        outline-offset: 3px;
+      }
+      @keyframes enter {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes stripe-in {
+        from {
+          opacity: 0;
+          transform: translate(70px, -40px) rotate(43deg);
+        }
+        to {
+          opacity: 1;
+          transform: translate(0) rotate(43deg);
+        }
+      }
+      @media (max-width: 780px) {
+        body {
+          padding: 18px 14px 100px;
+        }
+        .hero {
+          min-height: 470px;
+          padding: 35px;
+        }
+        .hero::before {
+          right: -52%;
+          width: 75%;
+        }
+        .hero::after {
+          right: -86%;
+          width: 78%;
+        }
+        .about-card {
+          grid-template-columns: 1fr;
+        }
+        .about-image {
+          grid-row: 1;
+        }
+        .gallery {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 11px;
+        }
+      }
+      @media (max-width: 520px) {
+        body {
+          padding: 10px 10px 96px;
+        }
+        .hero {
+          min-height: 510px;
+          padding: 26px 22px;
+          border-radius: 12px;
+        }
+        .hero::before {
+          top: -26%;
+          right: -76%;
+          width: 112%;
+          height: 125%;
+        }
+        .hero::after {
+          top: -8%;
+          right: -110%;
+          width: 112%;
+          height: 130%;
+        }
+        .hero h1 {
+          margin-top: 29px;
+        }
+        .intro {
+          font-size: 0.94rem;
+        }
+        .actions {
+          gap: 9px;
+        }
+        .action {
+          min-width: calc(50% - 5px);
+          padding: 11px 10px;
+          font-size: 0.9rem;
+        }
+        .section {
+          padding-top: 58px;
+        }
+        .about-card {
+          gap: 22px;
+          padding: 18px;
+        }
+        .skills {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .gallery {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 9px;
+        }
+        .contact-card {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 22px;
+        }
+        .contact-actions {
+          width: 100%;
+        }
+        .contact-actions .action {
+          flex: 1;
+          min-width: 0;
+        }
+        .bottom-nav {
+          bottom: 8px;
+          width: calc(100% - 16px);
+          padding: 6px 4px;
+        }
+        .bottom-nav a {
+          font-size: 0.58rem;
+          padding: 7px 2px;
+        }
+        .bottom-nav a span {
+          font-size: 1.15rem;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        .poster {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="site">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <a class="brand" href="#home" aria-label="Raviraj Shedge home">
+            <img
+              class="brand-mark"
+              src="images/image1.png"
+              alt="SR Creation logo"
+            />
+            <span>Creative portfolio</span>
+          </a>
+          <h1 id="hero-title">SR CREATION</h1>
+          <p class="hero-name">Raviraj Shedge</p>
+          <h2>Graphic design · Event posters · Celebrations</h2>
+          <div class="rule" aria-hidden="true"></div>
+          <p class="intro">
+            Colourful designs for the moments that bring people together.
+            Explore a collection of festival artwork, local events and personal
+            celebrations.
+          </p>
+          <div class="actions">
+            <a class="action" href="#gallery"
+              ><span class="action-icon" aria-hidden="true">▧</span> View
+              Gallery</a
+            >
+            <a class="action" href="tel:+917028306752"
+              ><span class="action-icon" aria-hidden="true">☎</span> Call</a
+            >
+            <a
+              class="action secondary"
+              href="https://wa.me/917028306752"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="action-icon" aria-hidden="true">◉</span> WhatsApp</a
+            >
+            <a class="action secondary" href="#contact"
+              ><span class="action-icon" aria-hidden="true">✉</span> Contact</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <span class="kicker">A little about me</span>
+          <h2 id="about-title">Made for your moments.</h2>
+        </div>
+        <div class="about-card">
+          <div class="about-copy">
+            <p>
+              I create vibrant visual designs that help celebrations, community
+              events and special milestones feel memorable. From festive
+              greetings to event posters, each design is made to feel personal
+              and full of life.
+            </p>
+            <ul class="skills">
+              <li>Event posters</li>
+              <li>Festival greetings</li>
+              <li>Celebration designs</li>
+              <li>Community events</li>
+            </ul>
+            <div class="terms">
+              <h3>एस.आर क्रियशन मध्ये आपले सहर्ष स्वागत .!</h3>
+              <ol lang="mr">
+                <li>१००% अॅडवान्स आल्याशिवाय काम सुरु केले जाणार नाही.</li>
+                <li>एकदा डिझाईन बनवुन झाली कि परत Cancel होणार नाही.</li>
+                <li>बनवलेली डिझाईन व्यवस्थित चेक करून घेणे.</li>
+                <li>एकदा Salect केलेला Pattern परत चेंज होणार नाही.</li>
+              </ol>
+              <p>एस.आर क्रियशन ला संपर्क केल्याबद्दल धन्यवाद.!</p>
+              <div class="payment-details">
+                <span><strong>G.PAY</strong> 7028306752</span>
+                <span><strong>फोन पे</strong> ७०२८३०६७५२</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <img
+              src="images/image11.jpeg"
+              alt="Shivaji Maharaj Jayanti design by Raviraj Shedge"
+            />
+            <span class="image-note">Thoughtful design, bold colour</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <span class="kicker">Selected work</span>
+          <h2 id="gallery-title">Design gallery.</h2>
+          <p>
+            A selection of posters and artwork. Tap any design to open a larger
+            preview.
+          </p>
+        </div>
+        <div class="gallery" aria-label="Poster design gallery">
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open bullock-cart race poster"
+            >
+              <img
+                src="images/image12.jpeg"
+                alt="Marathi bullock-cart race event poster"
+              />
+            </button>
+            <p class="poster-caption" lang="mr">बैलगाडा शर्यत डिझाईन</p>
+          </div>
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open bullock pair celebration poster"
+            >
+              <img
+                src="images/image2.jpeg"
+                alt="Bullock pair celebration poster"
+              />
+            </button>
+            <p class="poster-caption" lang="mr">बैलपोळा डिझाईन</p>
+          </div>
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open Navratri festival poster"
+            >
+              <img
+                src="images/image3.jpeg"
+                alt="Navratri festival celebration poster"
+              />
+            </button>
+            <p class="poster-caption" lang="mr">नवरात्री डिझाईन</p>
+          </div>
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open memorial poster"
+            >
+              <img
+                src="images/image4.jpeg"
+                alt="Memorial and remembrance poster"
+              />
+            </button>
+            <p class="poster-caption" lang="mr">श्रद्धांजली डिझाईन</p>
+          </div>
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open congratulations poster"
+            >
+              <img
+                src="images/image5.jpeg"
+                alt="Portrait and congratulations poster"
+              />
+            </button>
+            <p class="poster-caption" lang="mr">अभिनंदन डिझाईन</p>
+          </div>
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open birthday celebration poster"
+            >
+              <img src="images/image6.jpeg" alt="Birthday celebration poster" />
+            </button>
+            <p class="poster-caption" lang="mr">वाढदिवस डिझाईन</p>
+          </div>
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open second birthday poster"
+            >
+              <img src="images/image7.jpeg" alt="Second birthday poster" />
+            </button>
+            <p class="poster-caption" lang="mr">वाढदिवस डिझाईन</p>
+          </div>
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open Dussehra greetings poster"
+            >
+              <img src="images/image8.jpeg" alt="Dussehra greetings poster" />
+            </button>
+            <p class="poster-caption" lang="mr">दसरा शुभेच्छा डिझाईन</p>
+          </div>
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open cultural event schedule poster"
+            >
+              <img
+                src="images/image9.jpeg"
+                alt="Marathi cultural event schedule poster"
+              />
+            </button>
+            <p class="poster-caption" lang="mr">दुर्गामाता दौड डिझाईन</p>
+          </div>
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open Navratri event poster"
+            >
+              <img
+                src="images/image10.jpeg"
+                alt="Navratri festival event poster"
+              />
+            </button>
+            <p class="poster-caption" lang="mr">नवरात्री उत्सव डिझाईन</p>
+          </div>
+          <div class="poster-item">
+            <button
+              class="poster"
+              type="button"
+              aria-label="Open Shivaji Maharaj Jayanti poster"
+            >
+              <img
+                src="images/image11.jpeg"
+                alt="Chhatrapati Shivaji Maharaj Jayanti poster"
+              />
+            </button>
+            <p class="poster-caption" lang="mr">
+              छत्रपती शिवाजी महाराज जयंती डिझाईन
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-card">
+          <div>
+            <span class="kicker">Let's create something</span>
+            <h2 id="contact-title">Have a celebration coming up?</h2>
+            <p>Get in touch to discuss a poster or event design.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="action" href="tel:+917028306752">☎ Call</a>
+            <a
+              class="action secondary"
+              href="https://wa.me/917028306752"
+              target="_blank"
+              rel="noopener noreferrer"
+              >◉ WhatsApp</a
+            >
+          </div>
+        </div>
+      </section>
+      <footer>
+        © <span id="year">2026</span> Raviraj Shedge · Made with creativity
+      </footer>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <a class="active" href="#home"><span aria-hidden="true">⌂</span>HOME</a>
+      <a href="#about"><span aria-hidden="true">▣</span>ABOUT</a>
+      <a href="#gallery"><span aria-hidden="true">▧</span>DESIGNS</a>
+      <a href="#contact"><span aria-hidden="true">✉</span>CONTACT</a>
+    </nav>
+
+    <div
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Poster preview"
+    >
+      <button class="close" type="button" aria-label="Close poster preview">
+        ×
+      </button>
+      <img src="" alt="" />
+    </div>
+
+    <script>
+      const posters = document.querySelectorAll(".poster");
+      const lightbox = document.querySelector(".lightbox");
+      const preview = lightbox.querySelector("img");
+      const closeButton = lightbox.querySelector(".close");
+      const navLinks = document.querySelectorAll(".bottom-nav a");
+      let previousFocus;
+
+      if ("IntersectionObserver" in window) {
+        const posterObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+        posters.forEach((poster, index) => {
+          poster.style.transitionDelay = `${(index % 4) * 55}ms`;
+          posterObserver.observe(poster);
+        });
+
+        const sectionObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                navLinks.forEach((link) =>
+                  link.classList.toggle(
+                    "active",
+                    link.hash === `#${entry.target.id}`,
+                  ),
+                );
+              }
+            });
+          },
+          { rootMargin: "-35% 0px -55% 0px" },
+        );
+        document
+          .querySelectorAll("main > section[id]")
+          .forEach((section) => sectionObserver.observe(section));
+      } else {
+        posters.forEach((poster) => poster.classList.add("visible"));
+      }
+
+      posters.forEach((poster) => {
+        poster.addEventListener("click", () => {
+          const image = poster.querySelector("img");
+          previousFocus = poster;
+          preview.src = image.src;
+          preview.alt = image.alt;
+          lightbox.classList.add("open");
+          document.body.style.overflow = "hidden";
+          closeButton.focus();
+        });
+      });
+
+      function closePreview() {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+        if (previousFocus) previousFocus.focus();
+      }
+      closeButton.addEventListener("click", closePreview);
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) closePreview();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && lightbox.classList.contains("open"))
+          closePreview();
+      });
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
